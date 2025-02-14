@@ -3,6 +3,12 @@ import Background from './Background.js';
 import Player from './Player.js';
 import Npc from './Npc.js';
 
+//adds a function to set the objecst in a random position
+function randomPosition() {
+    let random = parseInt( (50 + Math.random()*100));
+    return random
+  }
+
 class GameLevelFood {
     constructor(path){
         const header = document.querySelector('header');
@@ -36,7 +42,7 @@ class GameLevelFood {
         right: {row: 1, start: 0, columns: 3 },
         up: {row: 3, start: 0, columns: 3 },
         hitbox: { widthPercentage: 0.45, heightPercentage: 0.2 },
-        keypress: { up: 87, left: 65, down: 83, right: 68 } // W, A, S, D
+        keypress: { up: 87, left: 65, down: 83, right: 68 } // wasd
         }
 
         //collectable data - cake
@@ -47,7 +53,7 @@ class GameLevelFood {
         SCALE_FACTOR: 8,
         ANIMATION_RATE: 50,
         pixels: {height: 256, width: 352},
-        INIT_POSITION: { x: (width / 2), y: (height / 2)},
+        INIT_POSITION: { x: randomPosition, y: randomPosition},
         orientation: {rows: 8, columns: 11 },
         down: {row: 5, start: 0, columns: 3 }, 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
@@ -61,7 +67,7 @@ class GameLevelFood {
         SCALE_FACTOR: 8,
         ANIMATION_RATE: 50,
         pixels: {height: 256, width: 352},
-        INIT_POSITION: { x: (width / 2), y: (height / 2)},
+        INIT_POSITION: { x: randomPosition, y: randomPosition},
         orientation: {rows: 8, columns: 11 },
         down: {row: 5, start: 0, columns: 3 },
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
