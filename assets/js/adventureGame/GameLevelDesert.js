@@ -155,7 +155,7 @@ class GameLevelDesert {
       hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
       //makes the greeting when interacted
       reaction: function() {
-        alert(sprite_greet_r2d2);
+        alert(sprite_greet_spaceship);
       },
       //It pauses the main game, creates a new GameControl instance with the StarWars level
       interact: function() {
@@ -214,6 +214,7 @@ const sprite_data_htmlhank = {
       { class: Npc, data: sprite_data_tux },
       { class: Npc, data: sprite_data_octocat },
       { class: Npc, data: sprite_data_robot },
+      { class: Npc, data: sprite_data_spaceship },
      // { class: Npc, data: sprite_data_htmlhank }, 
     ];
   }
